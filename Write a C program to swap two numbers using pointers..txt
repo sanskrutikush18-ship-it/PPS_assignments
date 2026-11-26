@@ -1,0 +1,32 @@
+
+#include <stdio.h>
+
+// Function to swap two numbers using pointers
+void swap(int *a, int *b)
+{
+    int temp;
+
+    temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+int main()
+{
+    int num1, num2;
+
+    printf("Enter two numbers: ");
+    scanf("%d %d", &num1, &num2);
+
+    printf("\nBefore swapping:");
+    printf("\nFirst number = %d", num1);
+    printf("\nSecond number = %d", num2);
+
+    swap(&num1, &num2);
+
+    printf("\n\nAfter swapping:");
+    printf("\nFirst number = %d", num1);
+    printf("\nSecond number = %d", num2);
+
+    return 0;
+}
